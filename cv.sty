@@ -1,0 +1,34 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cv}[2014/08/21 CV package]
+
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[english]{babel}
+\RequirePackage{graphicx}
+\RequirePackage{hyperref}
+\RequirePackage{xcolor}
+
+\graphicspath{ {./images/} }
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=blue,
+  urlcolor=blue,
+}
+\urlstyle{same}
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+% experience
+\newcommand{\xp}[4]{#1\\{#2}\\\textit{#3 – #4}}
+
+% project
+\newcommand{\p}[4]{
+  \textbf{#1}\\
+  \href{#2}{#2}\\
+  \textit{#3}\\
+  % \raisebox{-0.25\height}{\includegraphics[scale=0.1]{stack}}
+  \texttt{#4}
+}
