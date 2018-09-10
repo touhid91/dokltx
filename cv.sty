@@ -7,31 +7,36 @@
 \RequirePackage{graphicx}
 \RequirePackage{hyperref}
 \RequirePackage{xcolor}
+\RequirePackage{wrapfig}
+\RequirePackage[left=0.5in, right=0.5in, top=1in]{geometry}
 
 \graphicspath{ {./images/} }
-\definecolor{purple1}{cmyk}{0.3, 1.0, 0.3, 0.3}
+
+\definecolor{cvteal}{cmyk}{0.98, 0.3, 0.0, .75}
+
 \hypersetup{
   colorlinks=true,
-  linkcolor=purple1,
-  filecolor=purple1,
-  urlcolor=purple1,
+  linkcolor=cvteal,
+  filecolor=cvteal,
+  urlcolor=cvteal,
 }
 \urlstyle{same}
 \makeatletter
 \renewcommand{\@seccntformat}[1]{}
 \makeatother
+\pagenumbering{gobble}
 
 % avatar
 \newcommand{\avatar}[2]{\includegraphics[scale=#2]{#1}}
 
 % experience
-\newcommand{\xp}[4]{#1\\{#2}\\\textit{#3 – #4}}
+\newcommand{\xp}[4]{#1,\\{#2}\\\textit{#3 – #4}}
 
 % project
 \newcommand{\p}[4]{
-  \noindent\textbf{#1}\\
+  \textbf{#1}\\
   \href{#2}{#2}\\
-  \textit{#3}\\
-  % \raisebox{-0.25\height}{\includegraphics[scale=0.1]{stack}}
-  \texttt{#4}
+  \textit{#3}\\\color{cvteal}
+  \texttt{#4}\\
+  \color{black}
 }

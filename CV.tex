@@ -1,20 +1,22 @@
 % !TEX root = "CV.tex"
-\documentclass[a4paper,openright,12pt]{article}
+\documentclass[a4paper, 10pt]{article}
 
-\usepackage{wrapfig}
 \usepackage{cv}
-\usepackage[left=1.5in, right=1.5in, top=2in]{geometry}
 
 \title{R\'esum\'e}
 \author{Touhid Alam}
 \date{\today}
 
 \begin{document}
-\input{pages/overview}
-\input{pages/contact}
-\input{pages/motto}
+\begin{wrapfigure}{r}{0.5\textwidth}
+
+  \input{pages/overview}
+  \input{pages/contact}
+  \input{pages/motto}
+  \input{pages/links}
+  \input{pages/education}
+
+\end{wrapfigure}
 \input{pages/experience}
-\input{pages/education}
-\input{pages/links}
 
 \end{document}
